@@ -1,8 +1,7 @@
-# A Naive Obstacle Avoidance Technique for Turtlebot 3 implemented in ROS
-This is a part of my small effort in creating some basic projects implemented in ROS. As I am totally new at learning ROS, feel free to give constructive comments. If you are absolutely new at learning ROS, it might help you. You may use the codes as-is. 
+# Obstacle Avoidance for Turtlebot 3 Using Planer-Ranger Finder implemented in ROS
 
 ## Introduction 
-This is an obstacle avoidance technique simulated with Turtlebot 3 in Gazebo, ROS. The Turtlebot uses planar laser range-finder to detect obstacles in front as well as 15 degrees left and right from the front. Then based on the obstacle range, it either goes forward with linear velocity or, stops and rotates with angular velocity until it finds an obstacle-free path to go forward again.
+An obstacle avoidance algorithm simulated with Turtlebot 3 in Gazebo, ROS. The Turtlebot uses planar laser range-finder to detect obstacles in front as well as 10 degrees left and right from the front. Then based on the obstacle range, it either goes forward with linear velocity or, stops and rotates with angular velocity until it finds an obstacle-free path to go forward again.
 
 ## Pre-requisites
 - Python 2 
@@ -24,7 +23,8 @@ roslaunch obstacle-avoidance-turtlebot naive_obs_avoid.launch
 ```
 
 ## Demo
-![demo.gif](demo/demo.gif)
+![1.png](demo/1.png)
+![2.png](demo/2.png)
 
 
 ## Details
@@ -38,7 +38,7 @@ And,
 - we are interested in both `linear` and `angular` 3D vectors' x and z values, respectively (to move forward and rotate) from the `Twist` message.
 
 ### Note
-This is implemented on Ubuntu 18.04, ROS Melodic Morenia.
+This is implemented on Ubuntu 16.04 LTS, ROS 1 version kinetic.
 
 ## Reference
 1. http://wiki.ros.org/ROS/Tutorials
